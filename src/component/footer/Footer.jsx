@@ -31,7 +31,7 @@ const Footer = () => {
 			</ul>
 
 			<div className='footer__socials'>
-				<a href='https://www.linkedin.com/in/gbenga-akinnukawe/'>
+				<a href='https://www.linkedin.com/in/akinnukawe-gbenga/'>
 					<BsLinkedin />{" "}
 				</a>
 				<a href='https://github.com/Emsun0211'>
