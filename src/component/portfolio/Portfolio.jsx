@@ -1,0 +1,100 @@
+import React from "react";
+import portfolio1 from "../../assets/accomodationapp.png";
+import portfolio2 from "../../assets/ibeeplandingpage.png";
+import portfolio3 from "../../assets/techtimelandingoage.png";
+import portfolio4 from "../../assets/chatapplandingpage.png";
+import portfolio5 from "../../assets/ecommerce.png";
+import portfolio6 from "../../assets/namesearch.png";
+
+import "./portfolio.css";
+
+const data = [
+	{
+		id: 1,
+		image: portfolio1,
+		title: "Jewel Website",
+		details:
+			"Hotel accomodation booking app. Built with ReactJS, TailwindCSS & AOC Library",
+		github: "https://github.com/Emsun0211/accomodation.git",
+		demo: "https://accomodation-kohl.vercel.app/",
+	},
+	{
+		id: 2,
+		image: portfolio2,
+		title: "ibeep Website",
+		details:
+			"Landing Page for ibeep training school Web Application built with ReactJS.",
+		github: "https://github.com/atere21/ibeep-project.git",
+		demo: "http://ibeep-project.vercel.app",
+	},
+	{
+		id: 3,
+		image: portfolio3,
+		title: "TechTime Website",
+		github: "https://github.com/Emsun0211/talentplus.git",
+		details: "Landing Page Web Application built with ReactJS.",
+		demo: "https://talentplus.vercel.app/",
+	},
+	{
+		id: 4,
+		image: portfolio4,
+		title: "Chat App",
+		details: "A chat App  built with ReactJS, Nodejs and socket.io.",
+		github: "https://github.com/Emsun0211/textchatclient.git",
+		demo: "https://textchat-lilac.vercel.app/",
+	},
+	{
+		id: 5,
+		image: portfolio5,
+		title: "Sage Shop",
+		details: "An Ecommerce website Landing Page Bank  built with ReactJS.",
+		github: "https://github.com/Emsun0211/task-5.git",
+		demo: "https://task-5-sage.vercel.app/",
+	},
+	{
+		id: 6,
+		image: portfolio6,
+		title: "Name Search",
+		details:
+			"A search and filter application built with HTML, CSS and JavaScript",
+		github: "https://github.com/Emsun0211/TiideLabMiniproject.git",
+		demo: "https://emsunminiproject.netlify.app/",
+	},
+];
+
+const Portfolio = () => {
+	return (
+		<section id='portfolio'>
+			<h5>My Recent Work</h5>
+			<h2>Portfolio</h2>
+
+			<div className='container portfolio__container'>
+				{data.map(({ id, image, title, details, github, demo }) => {
+					return (
+						<article key={id} className='portfolio__item'>
+							<div className='portfolio_item-image'>
+								<img src={image} alt='first portfolio' />
+							</div>
+							<h3>{title}</h3>
+							<h6>{details}</h6>
+							<div className='portfolio__item-cta'>
+								<a href={github} className='btn' target='blank'>
+									Github
+								</a>
+								<a
+									href={demo}
+									className='btn btn-primary'
+									target='_blank'
+									rel='noreferrer'>
+									Live Demo
+								</a>
+							</div>
+						</article>
+					);
+				})}
+			</div>
+		</section>
+	);
+};
+
+export default Portfolio;
