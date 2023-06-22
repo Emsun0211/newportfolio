@@ -15,8 +15,10 @@
 	--color-bg-variant: #2c2c6c;
 	--color-primary: #4db5ff;
 	--color-primary-variant: rgba(77, 181, 255, 0.4);
+	--color-bg-light: rgb(71, 71, 126);
 
 	--color-white: #fff;
+	--color-gray: #ccc;
 	--color-light: rgba(255, 255, 255, 0.6);
 	--container-width-lg: 75%;
 	--container-width-md: 86%;
@@ -32,12 +34,33 @@ html {
 	display: none;
 }
 
-body {
+/* body {
 	font-family: "Poppins", sans-serif;
 	background: var(--color-bg);
+
 	color: var(--color-white);
 	line-height: 1.7;
-	/* background-image: url(../src/assets/bg-texture\ \(4\).jpg); */
+	
+} */
+.body-inner {
+	font-family: "Poppins", sans-serif;
+	background: var(--color-bg);
+
+	color: var(--color-white);
+	line-height: 1.7;
+}
+.body__inner_light {
+	background-color: var(--color-gray);
+	font-family: "Poppins", sans-serif;
+	line-height: 1.7;
+	/* color: var(--color-bg-variant); */
+}
+
+.theme__changer {
+	position: absolute;
+	top: 5%;
+	right: 10%;
+	padding: 1rem;
 }
 
 /* ========= GENERAL STYLES ============ */

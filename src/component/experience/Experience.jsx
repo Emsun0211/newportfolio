@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BsPatchCheckFill } from "react-icons/bs";
+import { ThemeManager } from "../../context/ThemeTypes";
 
 import "./experience.css";
 
 const Experience = () => {
+	const { isDarkMode } = useContext(ThemeManager);
 	return (
 		<section id='experience'>
 			<h5>What Skills I have</h5>
 			<h2>My Experience</h2>
-			<div className='container experience__container'>
+			<div
+				className={
+					isDarkMode
+						? "container experience__container"
+						: "container experience__container__light"
+				}>
 				{/* FRONTEND */}
 				<div className='experience__frontend'>
 					<h3>Technology Stack</h3>
 					<div className='experience__content'>
 						<article className='experience__details'>
-							<BsPatchCheckFill className='experience__details-icon' />
+							<BsPatchCheckFill
+								// className='experience__details-icon'
+								color={isDarkMode ? "white" : "#2c2c6c"}
+							/>
 							<div>
 								<h4>HTML</h4>
 							</div>
