@@ -19,7 +19,10 @@ const Experience = () => {
 				{/* FRONTEND */}
 				<div className='experience__frontend'>
 					<h3>Technology Stack</h3>
-					<div className='experience__content'>
+					<div
+						className={
+							isDarkMode ? "experience__content" : "experience__content__light"
+						}>
 						<article className='experience__details'>
 							<BsPatchCheckFill
 								// className='experience__details-icon'

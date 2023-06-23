@@ -32,6 +32,10 @@
 .portfolio__item h3 {
 	margin: 1.2rem 0 0;
 }
+.portfolio__item__light h3 {
+	margin: 1.2rem 0 0;
+	color: var(--color-light);
+}
 
 .portfolio__item h6 {
 	margin-bottom: 1.5rem;

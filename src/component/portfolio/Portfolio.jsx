@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import portfolio1 from "../../assets/accomodationapp.png";
 import portfolio2 from "../../assets/ibeeplandingpage.png";
 import portfolio3 from "../../assets/techtimelandingoage.png";
@@ -10,6 +10,7 @@ import portfolio8 from "../../assets/musicapp.jpg";
 import portfolio9 from "../../assets/weatherapp.jpg";
 
 import "./portfolio.css";
+import { ThemeManager } from "../../context/ThemeTypes";
 
 const data = [
 	{
@@ -73,30 +74,27 @@ const data = [
 	{
 		id: 7,
 		image: portfolio7,
-		title: "Name Search",
-		details:
-			"A search and filter application built with HTML, CSS and JavaScript",
-		github: "https://github.com/Emsun0211/TiideLabMiniproject.git",
+		title: "Food delivery app",
+		details: "A food delivery app built with React Native and Sanity.io",
+		github: "https://github.com/Emsun0211/delivero-client.git",
 		demo: "https://emsunminiproject.netlify.app/",
 		category: "mobile",
 	},
 	{
 		id: 8,
 		image: portfolio8,
-		title: "Name Search",
-		details:
-			"A search and filter application built with HTML, CSS and JavaScript",
-		github: "https://github.com/Emsun0211/TiideLabMiniproject.git",
+		title: "Music App",
+		details: "A music player mobile app built with React Native",
+		github: "https://github.com/Emsun0211/musicapp.git",
 		demo: "https://emsunminiproject.netlify.app/",
 		category: "mobile",
 	},
 	{
 		id: 9,
 		image: portfolio9,
-		title: "Name Search",
-		details:
-			"A search and filter application built with HTML, CSS and JavaScript",
-		github: "https://github.com/Emsun0211/TiideLabMiniproject.git",
+		title: "Weather",
+		details: "A Weather App built with React Native and open-weather Api",
+		github: "https://github.com/Emsun0211/weatherapp.git",
 		demo: "https://emsunminiproject.netlify.app/",
 		category: "mobile",
 	},
@@ -106,6 +104,7 @@ const mobile = data.filter((data) => data.category === "mobile");
 
 const Portfolio = () => {
 	const [isweb, setisWeb] = useState(true);
+	const { isDarkMode } = useContext(ThemeManager);
 	return (
 		<section id='portfolio'>
 			<h5>My Recent Work</h5>
@@ -131,7 +130,9 @@ const Portfolio = () => {
 								<div className='portfolio_item-image'>
 									<img src={image} alt='first portfolio' />
 								</div>
-								<h3>{title}</h3>
+								<h3 className={!isDarkMode && "portfolio__item__light"}>
+									{title}
+								</h3>
 								<h6>{details}</h6>
 								<div className='portfolio__item-cta'>
 									<a href={github} className='btn' target='blank'>
@@ -157,19 +158,19 @@ const Portfolio = () => {
 								<div className='portfolio_item-image'>
 									<img src={image} alt='first portfolio' />
 								</div>
-								<h3>{title}</h3>
+								<h3 style={{}}>{title}</h3>
 								<h6>{details}</h6>
 								<div className='portfolio__item-cta'>
 									<a href={github} className='btn' target='blank'>
 										Github
 									</a>
-									<a
+									{/* <a
 										href={demo}
 										className='btn btn-primary'
 										target='_blank'
 										rel='noreferrer'>
 										Live Demo
-									</a>
+									</a> */}
 								</div>
 							</article>
 						);
