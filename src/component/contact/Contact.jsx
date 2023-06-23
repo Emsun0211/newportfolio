@@ -15,10 +15,10 @@ const Contact = () => {
 
 		emailjs
 			.sendForm(
-				"service_g4qclrg",
-				"template_0bjg7lh",
+				"service_rztf7qn",
+				"contact_form",
 				form.current,
-				"eHUAoQ_479hMI3cFS"
+				"ejvaA1vih2eae5pc4"
 			)
 			.then(
 				(result) => {
@@ -40,7 +40,7 @@ const Contact = () => {
 						<MdOutlineEmail className='contact__option-icon' />
 						<h4>Email</h4>
 						<h5>emsunconcept@gmail</h5>
-						<a href='mailto:emsunconcept@gmail.com' target='blank'>
+						<a href='mailto:gbengaakinnukawe@gmail.com' target='blank'>
 							Send a message
 						</a>
 					</article>
@@ -67,11 +67,16 @@ const Contact = () => {
 				<form ref={form} onSubmit={sendEmail}>
 					<input
 						type='text'
-						name='name'
+						name='user_name'
 						placeholder='Your Full Name'
 						required
 					/>
-					<input type='email' name='email' placeholder='Your Email' required />
+					<input
+						type='email'
+						name='user_email'
+						placeholder='Your Email'
+						required
+					/>
 					<textarea
 						name='message'
 						placeholder='Your Message'
