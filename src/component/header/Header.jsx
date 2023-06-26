@@ -7,15 +7,14 @@ import "./header.css";
 import { ThemeManager } from "../../context/ThemeTypes";
 
 const Header = () => {
+	const { isDarkMode } = useContext(ThemeManager);
 	return (
 		<header id='top'>
 			<div className='container header__container'>
 				<h5>Hi, I'm</h5>
 				<h1>Gbenga Akinnukawe</h1>
-				<h5 className=''>
-					I'm a Frontend Developer and a Mobile App Developer
-				</h5>
-				<CTA />
+				<h5 className=''>I'm a Frontend and Mobile App Developer</h5>
+				<CTA isDarkMode={isDarkMode} />
 				<HeaderSocials />
 
 				<div className='header__profile-image-container'>

@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import profileImage from "../../assets/gbenga2.png";
 import { FaAward, FaUsers, FaLaptopCode } from "react-icons/fa";
 import { AiFillFolderOpen } from "react-icons/ai";
 
 import "./about.css";
+import { ThemeManager } from "../../context/ThemeTypes";
 
 const About = () => {
+	const { isDarkMode } = useContext(ThemeManager);
 	return (
 		<section id='about'>
 			<h5>Get To Know</h5>
@@ -45,7 +47,7 @@ const About = () => {
 						</article>
 					</div> */}
 
-					<p className='_about_text'>
+					<p className='_about_text' style={{ color: !isDarkMode && "black" }}>
 						Hi, I am Gbenga Akinnukawe a Frontend and Mobile app developer. I
 						specialize in building responsive and intuitive web and mobile apps
 						that leave a lasting impression on users.
@@ -69,7 +71,13 @@ const About = () => {
 						tailored solutions.
 					</p>
 
-					<a href='#contact' className='btn btn-primary'>
+					<a
+						href='#contact'
+						className={
+							isDarkMode
+								? "btn btn-primary"
+								: " btn__light btn-primary btn_light"
+						}>
 						Let's Talk
 					</a>
 				</div>

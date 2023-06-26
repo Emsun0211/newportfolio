@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
@@ -6,8 +6,10 @@ import { useRef } from "react";
 import emailjs from "emailjs-com";
 
 import "./contact.css";
+import { ThemeManager } from "../../context/ThemeTypes";
 
 const Contact = () => {
+	const { isDarkMode } = useContext(ThemeManager);
 	const form = useRef();
 
 	const sendEmail = (e) => {
@@ -36,7 +38,10 @@ const Contact = () => {
 			<h2>Contact Me</h2>
 			<div className='container contact__container'>
 				<div className='contact__options-container'>
-					<article className='contact__option'>
+					<article
+						className={
+							isDarkMode ? "contact__option" : "contact__option__light"
+						}>
 						<MdOutlineEmail className='contact__option-icon' />
 						<h4>Email</h4>
 						<h5>emsunconcept@gmail</h5>
@@ -44,7 +49,10 @@ const Contact = () => {
 							Send a message
 						</a>
 					</article>
-					<article className='contact__option'>
+					<article
+						className={
+							isDarkMode ? "contact__option" : "contact__option__light"
+						}>
 						<BsWhatsapp className='contact__option-icon' />
 						<h4>Whatsapp</h4>
 						<h5>+2347032352156</h5>
@@ -54,7 +62,10 @@ const Contact = () => {
 							Send a message
 						</a>
 					</article>
-					<article className='contact__option'>
+					<article
+						className={
+							isDarkMode ? "contact__option" : "contact__option__light"
+						}>
 						<AiOutlineTwitter className='contact__option-icon' />
 						<h4>Twitter</h4>
 						<h5>Gbenga Akinnuakwe</h5>
@@ -70,18 +81,27 @@ const Contact = () => {
 						name='user_name'
 						placeholder='Your Full Name'
 						required
+						style={{ color: !isDarkMode && "black" }}
 					/>
 					<input
 						type='email'
 						name='user_email'
 						placeholder='Your Email'
 						required
+						style={{ color: !isDarkMode && "black" }}
 					/>
 					<textarea
 						name='message'
 						placeholder='Your Message'
-						rows='7'></textarea>
-					<button type='submit' className='btn btn-primary'>
+						rows='7'
+						style={{ color: !isDarkMode && "black" }}></textarea>
+					<button
+						type='submit'
+						className={
+							isDarkMode
+								? "btn btn-primary"
+								: " btn__light btn-primary btn_light"
+						}>
 						Send Message
 					</button>
 				</form>

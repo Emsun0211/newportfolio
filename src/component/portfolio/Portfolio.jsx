@@ -140,7 +140,7 @@ const Portfolio = () => {
 									</a>
 									<a
 										href={demo}
-										className='btn btn-primary'
+										className='btn__light btn-primary'
 										target='_blank'
 										rel='noreferrer'>
 										Live Demo

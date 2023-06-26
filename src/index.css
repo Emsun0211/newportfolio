@@ -50,7 +50,7 @@ html {
 	line-height: 1.7;
 }
 .body__inner_light {
-	background-color: var(--color-gray);
+	background-color: var(--color-white);
 	font-family: "Poppins", sans-serif;
 	line-height: 1.7;
 	/* color: var(--color-bg-variant); */
@@ -119,6 +119,16 @@ a:hover {
 	border: 1px solid var(--color-primary);
 	transition: var(--transition);
 }
+.btn__light {
+	width: max-content;
+	display: inline-block;
+	color: var(--color-primary);
+	padding: 0.75rem 1.2rem;
+	border-radius: 0.4rem;
+	cursor: pointer;
+	border: 1px solid var(--color-primary);
+	transition: var(--transition);
+}
 
 ._about_text {
 	line-height: 2;
@@ -129,8 +139,17 @@ a:hover {
 	color: var(--color-bg);
 	border-color: transparent;
 }
+.btn__light:hover {
+	background: var(--color-white);
+	color: var(--color-bg);
+	border-color: var(--color-primary-variant);
+}
 
 .btn-primary {
+	background: var(--color-primary);
+	color: var(--color-bg);
+}
+.btn-primary__light {
 	background: var(--color-primary);
 	color: var(--color-bg);
 }

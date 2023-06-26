@@ -8,6 +8,7 @@ header {
 	text-align: center;
 	height: 100%;
 	position: relative;
+	line-height: 2;
 }
 
 /* ===== CTA ==== */
@@ -77,6 +78,10 @@ header {
 @media screen and (max-width: 600px) {
 	.scroll__down {
 		display: none;
+	}
+
+	.header__container h1 {
+		font-size: 2rem;
 	}
 	.header__socials {
 		flex-direction: row;
