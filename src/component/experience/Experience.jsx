@@ -3,13 +3,14 @@ import { BsPatchCheckFill } from "react-icons/bs";
 import { ThemeManager } from "../../context/ThemeTypes";
 
 import "./experience.css";
+import ExperienceStepper from "../experiencestepper/ExperienceStepper";
 
 const Experience = () => {
 	const { isDarkMode } = useContext(ThemeManager);
 	return (
 		<section id='experience'>
-			<h5>What Skills I have</h5>
-			<h2>My Experience</h2>
+			<h5 style={{marginBottom: '2rem'}}>What Skills I have</h5>
+		
 			<div
 				className={
 					isDarkMode

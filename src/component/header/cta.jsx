@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import CV from "../../assets/GbengaAkinnukaweCV.pdf";
+import CV from "../../assets/Gbenga_Akinnukawe_CV.pdf";
 import { ThemeManager } from "../../context/ThemeTypes";
 
 const cta = ({ isDarkMode }) => {

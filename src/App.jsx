@@ -9,26 +9,31 @@ import Testimonial from "./component/testimonial/Testimonial";
 import Contact from "./component/contact/Contact";
 import Footer from "./component/footer/Footer";
 import { ThemeState } from "./context/ThemeState";
+import { ChakraProvider } from "@chakra-ui/react";
 
 import { ThemeManager } from "./context/ThemeTypes";
 import Theme from "./component/theme/Theme";
 import Layout from "./component/layout/Layout";
+import ExperienceStepper from "./component/experiencestepper/ExperienceStepper";
 
 const App = () => {
 	return (
-		<ThemeState>
-			<Layout>
-				<Theme />
-				<Header />
-				<Nav />
-				<About />
-				<Experience />
-				<Portfolio />
-				{/* <Testimonial /> */}
-				<Contact />
-				<Footer />
-			</Layout>
-		</ThemeState>
+		<ChakraProvider>
+			<ThemeState>
+				<Layout>
+					<Theme />
+					<Header />
+					<Nav />
+					<About />
+					< ExperienceStepper />
+					<Experience />
+					<Portfolio />
+					{/* <Testimonial /> */}
+					<Contact />
+					<Footer />
+				</Layout>
+			</ThemeState>
+		</ChakraProvider>
 	);
 };
 
