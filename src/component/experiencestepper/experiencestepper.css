@@ -1,5 +1,6 @@
 .experinece_stepper_wrapper{
     max-width: 1440px;
+    width: 100 ;
     margin: 4rem auto;
     display: flex;
     justify-content: space-between;

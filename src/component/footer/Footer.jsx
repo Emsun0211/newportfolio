@@ -44,7 +44,7 @@ const Footer = () => {
 
 			<div className='footer__copyright'>
 				<p>Built with ReactJS, SwiperJS & EmailJS</p>
-				<small>&copy; Gbenga 2023. All rights reserved</small>
+				<small>&copy; Gbenga 2024. All rights reserved</small>
 			</div>
 		</footer>
 	);

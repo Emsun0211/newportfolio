@@ -21,7 +21,7 @@ const App = () => {
 		<ChakraProvider>
 			<ThemeState>
 				<Layout>
-					<Theme />
+					{/* <Theme /> */}
 					<Header />
 					<Nav />
 					<About />

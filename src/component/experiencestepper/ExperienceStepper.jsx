@@ -19,19 +19,23 @@ const steps = [
 		duration: "June, 2022 - December, 2022",
 		description: "Select Rooms",
 		position: "Frontend Developer Intership",
+		location: "Remote"
 	},
 	{
 		title: "KSolutions Technology, Nigeria",
 		duration: "August, 2023 - May, 2024",
 		description: "Date & Time",
 		position: "Frontend Developer",
+		location: "Remote"
 	},
 	{
-		title: "Fatherland Holdings, US",
+		title: "Fatherland Holdings, Lagos",
 		duration: "May, 2024 - Present",
 		description: "Contact Info",
 		position: "Fullstack Developer",
+		location: "On Site"
 	},
+
 ].reverse();
 
 function ExperienceStepper() {
@@ -80,6 +84,7 @@ function ExperienceStepper() {
 									<StepTitle>{step.title}</StepTitle>
 									<StepDescription>{step.position}</StepDescription>
 									<StepDescription>{step.duration}</StepDescription>
+									<StepDescription>{step.location}</StepDescription>
 								</Box>
 							</Box>
 

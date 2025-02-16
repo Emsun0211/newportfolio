@@ -58,9 +58,10 @@ html {
 
 .theme__changer {
 	position: absolute;
-	top: 4%;
-	right: 6%;
+	top: 20;
+	right: 4%;
 	padding: 1rem;
+	z-index: 9999;
 }
 
 /* ========= GENERAL STYLES ============ */

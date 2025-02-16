@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import profileImage from "../../assets/gbenga2.png";
+import profileImage from "../../assets/gbenga-pic-2.jpg";
 import { FaAward, FaUsers, FaLaptopCode } from "react-icons/fa";
 import { AiFillFolderOpen } from "react-icons/ai";
 
